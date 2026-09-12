@@ -184,3 +184,58 @@ The findings therefore support the use of both deterministic and stochastic inve
 The analysis also highlights the importance of distinguishing between nominal and real values. Inflation reduces purchasing power and can materially affect both future cash flows and the appropriate discount rate. Consequently, inflation and interest-rate assumptions should be incorporated explicitly into investment valuation rather than treated as secondary considerations.
 
 Overall, the current results suggest that the investment is financially viable but exposed to moderate risk. The next stage of the analysis should improve the stochastic model by independently modelling revenue growth, cost growth, inflation, interest rates and other key economic variables. This would allow the project to identify the main drivers of NPV risk and provide a more robust basis for comparing investment conditions in Lithuania and the United Kingdom.
+
+
+================================================================================
+INVESTMENT PROJECT VALUATION MODEL
+Inflation, Interest Rates and Purchasing Power
+================================================================================
+
+BASE CASE ASSUMPTIONS
+--------------------------------------------------------------------------------
+Initial investment: €100,000.00
+Initial revenue:    €35,000.00
+Revenue growth:     5.00%
+Initial costs:      €20,000.00
+Cost growth:        4.00%
+Tax rate:           20.00%
+Discount rate:      5.00%
+Project horizon:    10 years
+
+BASE CASE VALUATION
+--------------------------------------------------------------------------------
+NPV: €20,653.20
+IRR: 8.68%
+Investment decision: ACCEPT
+
+PROJECT CASH FLOWS
+--------------------------------------------------------------------------------
+ Year   Revenue     Costs  Operating Profit    Taxes  Net Cash Flow
+    1 35,000.00 20,000.00         15,000.00 3,000.00      12,000.00
+    2 36,750.00 20,800.00         15,950.00 3,190.00      12,760.00
+    3 38,587.50 21,632.00         16,955.50 3,391.10      13,564.40
+    4 40,516.88 22,497.28         18,019.60 3,603.92      14,415.68
+    5 42,542.72 23,397.17         19,145.55 3,829.11      15,316.44
+    6 44,669.85 24,333.06         20,336.80 4,067.36      16,269.44
+    7 46,903.35 25,306.38         21,596.97 4,319.39      17,277.57
+    8 49,248.51 26,318.64         22,929.88 4,585.98      18,343.90
+    9 51,710.94 27,371.38         24,339.56 4,867.91      19,471.65
+   10 54,296.49 28,466.24         25,830.25 5,166.05      20,664.20
+
+MONTE CARLO SIMULATION
+--------------------------------------------------------------------------------
+Number of simulations: 10,000
+
+MONTE CARLO RISK RESULTS
+--------------------------------------------------------------------------------
+Expected NPV:        €35,515.34
+Median NPV:          €34,766.50
+NPV Std. Deviation:  €37,591.17
+Probability of loss: 16.92%
+P5 NPV:              €-25,205.09
+P95 NPV:             €98,188.98
+
+INVESTMENT RISK INTERPRETATION
+--------------------------------------------------------------------------------
+Estimated investment risk level: MODERATE
+Probability that NPV is negative: 16.92%
