@@ -21,3 +21,166 @@ investment_valuation/
 ├── main.py
 ├── requirements.txt
 └── README.md
+
+'''''''
+Summary and Findings
+1. Summary
+
+This project examines the impact of inflation, interest rates and changes in purchasing power on the valuation of an investment project. The analysis combines traditional investment appraisal techniques, including Net Present Value (NPV) and Internal Rate of Return (IRR), with stochastic Monte Carlo simulation to assess investment risk under uncertainty.
+
+The base-case investment requires an initial investment of €100,000 and has a projected horizon of 10 years. Initial annual revenue is estimated at €35,000, while initial operating costs are €20,000. Revenue is assumed to grow by 5% per year, compared with 4% annual growth in costs. The model applies a 20% tax rate and a 5% discount rate.
+
+Under these assumptions, the investment generates a positive NPV of approximately €20,653 and an IRR of 8.68%. Since the NPV is positive and the IRR exceeds the required 5% discount rate, the deterministic valuation indicates that the investment should be accepted.
+
+However, deterministic valuation alone does not capture the uncertainty surrounding future economic conditions. Therefore, the project also applies a Monte Carlo simulation with 10,000 scenarios. The simulation produces an expected NPV of approximately €36,428, a median NPV of approximately €35,908, and an NPV standard deviation of approximately €37,721.
+
+The probability of obtaining a negative NPV is estimated at 16.79%. This indicates that although the investment has a positive expected value, there remains a significant possibility that adverse economic and financial conditions could result in value destruction. The current model therefore classifies the investment as presenting moderate risk.
+
+Overall, the analysis demonstrates that investment decisions should consider both expected profitability and the distribution of possible outcomes. A positive base-case NPV does not eliminate investment risk, particularly when inflation, interest rates, revenue growth and operating costs are uncertain.
+
+2. Key Findings
+Finding 1 — The base-case investment creates economic value
+
+The base-case NPV is:
+
+€20,653
+
+A positive NPV indicates that the present value of expected future cash flows exceeds the initial investment after accounting for the 5% required rate of return.
+
+Therefore:
+
+NPV > 0 → Investment creates value → ACCEPT
+
+This provides a positive initial assessment of the project's financial attractiveness.
+
+Finding 2 — The project's expected return exceeds the required return
+
+The calculated IRR is:
+
+8.68%
+
+The required discount rate is:
+
+5.00%
+
+The difference between the IRR and discount rate is approximately:
+
+3.68 percentage points
+
+Therefore, the project's estimated internal rate of return is higher than the required return. This provides additional support for accepting the investment under the base-case assumptions.
+
+Finding 3 — Cash flows increase over the investment horizon
+
+Annual net cash flow increases from approximately €12,000 in Year 1 to approximately €20,664 in Year 10.
+
+This development is primarily explained by revenue growing at 5% annually while operating costs grow at 4% annually.
+
+The difference between the two growth rates gradually increases operating profitability. Consequently, the project's annual cash-generating capacity improves throughout the investment horizon.
+
+Finding 4 — Uncertainty materially changes the investment assessment
+
+The Monte Carlo simulation produces an expected NPV of approximately:
+
+€36,428
+
+while the deterministic base-case NPV is:
+
+€20,653
+
+The higher simulated expected NPV indicates that the probability distributions currently used in the stochastic model generate, on average, more favourable outcomes than the fixed base-case assumptions.
+
+This difference should be investigated further rather than interpreted automatically as evidence that the investment is worth more. It demonstrates the importance of carefully calibrating the probability distributions used in the Monte Carlo model.
+
+Finding 5 — The investment has meaningful downside risk
+
+The estimated probability of a negative NPV is:
+
+16.79%
+
+This means that approximately 1 out of every 6 simulated scenarios produces a negative investment value.
+
+Although the probability of success is substantially higher than the probability of loss, the downside probability is sufficiently large that the investment cannot be considered risk-free.
+
+This finding is particularly important because a conventional NPV calculation based on a single set of assumptions would not reveal this distribution of potential outcomes.
+
+Finding 6 — Potential downside losses are significant
+
+The 5th percentile of the simulated NPV distribution is approximately:
+
+−€23,934
+
+This means that in the lower tail of the simulated distribution, the project can generate a substantial negative NPV.
+
+By comparison, the 95th percentile is approximately:
+
+€98,807
+
+The wide range between the lower and upper percentiles demonstrates considerable uncertainty surrounding the project's potential economic value.
+
+The simulation therefore indicates that the project has both substantial upside potential and meaningful downside exposure.
+
+Finding 7 — NPV volatility is relatively high
+
+The standard deviation of simulated NPV is approximately:
+
+€37,721
+
+This is large relative to the €100,000 initial investment and indicates substantial dispersion in potential investment outcomes.
+
+Consequently, the expected NPV should not be considered in isolation. Investors should also consider the variability and probability distribution surrounding that expected value.
+
+Finding 8 — Inflation and interest rates are important valuation factors
+
+Inflation affects investment valuation through several channels.
+
+First, inflation changes the future purchasing power of money. A nominal cash flow received several years in the future has lower real purchasing power when prices increase.
+
+Second, inflation can affect revenues and operating costs differently. If costs increase faster than revenues, real profitability may deteriorate.
+
+Third, changes in interest rates influence the discount rate applied to future cash flows. Higher discount rates reduce the present value of future cash flows and can therefore reduce NPV.
+
+The interaction between inflation and interest rates is consequently central to understanding investment risk.
+
+Finding 9 — Nominal and real values must be treated consistently
+
+An important methodological conclusion is that nominal cash flows should be discounted using a nominal discount rate, while real cash flows should be discounted using a real discount rate.
+
+The relationship between nominal interest rates, real interest rates and inflation can be represented using the Fisher equation:
+
+(1 + i) = (1 + r)(1 + π)
+
+where:
+
+i = nominal interest rate
+r = real interest rate
+π = inflation rate
+
+This relationship provides the theoretical basis for analysing the effect of inflation on real investment returns and purchasing power.
+
+Finding 10 — The investment should be considered profitable but not risk-free
+
+The combined results lead to a more balanced investment conclusion.
+
+The deterministic model indicates:
+
+Positive NPV + IRR above discount rate → financially attractive
+
+The stochastic model indicates:
+
+16.79% probability of negative NPV → meaningful investment risk
+
+Therefore, the appropriate conclusion is not simply that the investment should be accepted because its NPV is positive. Instead, the investment appears financially attractive under the current assumptions but remains exposed to economic uncertainty.
+
+The final investment decision should therefore consider the investor's risk tolerance, financing conditions, inflation expectations and the reliability of the underlying revenue and cost assumptions.
+
+3. Overall Conclusion
+
+The analysis demonstrates that investment valuation is highly dependent on assumptions regarding future cash flows, inflation and discount rates. Under the base-case assumptions, the project generates a positive NPV of €20,653 and an IRR of 8.68%, indicating that the investment creates value at the assumed 5% required return.
+
+Nevertheless, the Monte Carlo analysis demonstrates that the positive base-case result does not eliminate uncertainty. Across 10,000 simulated scenarios, the probability of a negative NPV is 16.79%, while the simulated NPV distribution shows substantial dispersion between adverse and favourable outcomes.
+
+The findings therefore support the use of both deterministic and stochastic investment appraisal techniques. NPV and IRR provide a clear assessment of expected project profitability, while Monte Carlo simulation provides additional information about uncertainty and downside risk.
+
+The analysis also highlights the importance of distinguishing between nominal and real values. Inflation reduces purchasing power and can materially affect both future cash flows and the appropriate discount rate. Consequently, inflation and interest-rate assumptions should be incorporated explicitly into investment valuation rather than treated as secondary considerations.
+
+Overall, the current results suggest that the investment is financially viable but exposed to moderate risk. The next stage of the analysis should improve the stochastic model by independently modelling revenue growth, cost growth, inflation, interest rates and other key economic variables. This would allow the project to identify the main drivers of NPV risk and provide a more robust basis for comparing investment conditions in Lithuania and the United Kingdom.
