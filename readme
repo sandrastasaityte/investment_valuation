@@ -1,0 +1,23 @@
+investment_valuation/
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── outputs/
+│   ├── figures/
+│   ├── tables/
+│   └── reports/
+│
+├── src/
+│   ├── data_loader.py
+│   ├── financial_formulas.py
+│   ├── investment_model.py
+│   ├── inflation_analysis.py
+│   ├── monte_carlo.py
+│   ├── risk_analysis.py
+│   └── reporting.py
+│
+├── main.py
+├── requirements.txt
+└── README.md
